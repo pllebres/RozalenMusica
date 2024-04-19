@@ -9,6 +9,7 @@
     ],
     "scripts": { 
      "start": "npm-run-all clean parcel:dev",
+     "parcel:build": "parcel build",
      "clean": "rimraf dist .parcel-cache", 
      "parcel:dev": "parcel src/index.html",
      "build": "npm-run-all clean parcel:build"
