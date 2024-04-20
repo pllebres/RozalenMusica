@@ -530,30 +530,10 @@ display: grid;
             justify-content: center;
   }
 
-/* Default styles for the play icon */
-.play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 3em; /* Adjust size as needed */
-  color: rgba(255, 255, 255, 0.8); /* Adjust color and opacity as needed */
-  opacity: 0; /* Hide the icon by default */
-  -moz-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; /* Add a transition for smooth effect */
-}
 
-/* Show the play icon when hovering over the link */
-.box-link:hover .play-icon {
-  opacity: 1;
-}
-
-
-
-
-
+  .noticia_imagen{
+    text-align: center;
+  }
 
 
 @media screen and (max-width: 1024px) {
@@ -728,7 +708,14 @@ grid-auto-rows: auto;
   margin: 0;
 }
 
-
+  .noticia_imagen iframe {
+    width: 100%;
+    } 
+  
 }
+
+
+
+
 
 /*# sourceMappingURL=/styles.05b23a07.css.map */

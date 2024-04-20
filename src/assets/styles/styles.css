@@ -475,11 +475,9 @@ display: grid;
   }
 
 
-
-
-
-
-
+  .noticia_imagen{
+    text-align: center;
+  }
 
 
 @media screen and (max-width: 1024px) {
@@ -635,5 +633,11 @@ grid-auto-rows: auto;
   margin: 0;
 }
 
-
+  .noticia_imagen iframe {
+    width: 100%;
+    } 
+  
 }
+
+
+
