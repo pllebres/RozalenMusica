@@ -49,7 +49,6 @@ a h3:hover {
 .header {
   z-index: 2;
   background-color: #ffffffe6;
-  border: 1px solid #111;
   flex-direction: row;
   grid-template-columns: auto auto;
   justify-content: space-between;
@@ -112,9 +111,8 @@ nav.menuHTML {
   display: block;
 }
 
-#trickMenu a:hover {
-  background-color: #575757;
-  border-radius: 5px;
+#trickMenu li:hover {
+  background-color: var(--contrast-purple);
 }
 
 #menu-toggle:checked + label + #trickMenu {
@@ -154,7 +152,7 @@ nav.menuHTML {
 }
 
 .breadcrumb {
-  z-index: 2;
+  z-index: 1;
   margin-top: 80px;
   padding: 1rem 16vw;
   position: absolute;
@@ -171,9 +169,8 @@ nav.menuHTML {
   height: auto;
 }
 
-.hero-actualidad {
+.hero-interna {
   box-sizing: border-box;
-  background-image: url("raices.b345f67f.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 59%;
@@ -181,7 +178,24 @@ nav.menuHTML {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
   padding: 20px;
+  display: flex;
+}
+
+.hero-presentacion {
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 59%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 9rem 20px 20px;
   display: flex;
 }
 
@@ -202,7 +216,7 @@ nav.menuHTML {
 }
 
 .hero-text {
-  text-align: center;
+  text-align: left;
   flex: 1;
   padding: 20px;
 }
@@ -212,8 +226,12 @@ nav.menuHTML {
   height: auto;
 }
 
-svg#R {
+svg.R {
   width: 7rem;
+}
+
+.clip-svg {
+  clip-path: url("#myClip");
 }
 
 .clip-path {
@@ -222,7 +240,14 @@ svg#R {
   background-size: cover;
   width: 300px;
   height: 260px;
-  animation: 5s infinite wiggle;
+}
+
+.clip-path2 {
+  clip-path: ellipse(37% 41%);
+  background-image: url("hero_actualidad_img_big.511261a3.jpeg");
+  background-size: cover;
+  width: 300px;
+  height: 260px;
 }
 
 .path {
@@ -261,6 +286,23 @@ svg#R {
 
 #svg-music {
   width: 9rem;
+}
+
+.clip-svg {
+  clip-path: url("#myclip");
+  width: 300px;
+  height: auto;
+  animation: 3s forwards expandClipPath;
+}
+
+@keyframes expandClipPath {
+  0% {
+    clip-path: circle(0%);
+  }
+
+  100% {
+    clip-path: circle(50%);
+  }
 }
 
 .row1 {
@@ -537,7 +579,7 @@ i.fa-brands:hover {
   flex-direction: row;
   gap: 5vw;
   min-height: 15rem;
-  padding: 2rem 16vw;
+  padding: 11rem 16vw 0;
   display: flex;
 }
 
@@ -639,11 +681,18 @@ i.fa-brands:hover {
     padding: 10px 0;
   }
 
+  #trickMenu li {
+    color: var(--white);
+    text-align: left;
+    width: 100%;
+    padding: 1rem;
+    list-style: none;
+  }
+
   #menu-toggle:checked + #trickMenu {
     flex-flow: column wrap;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-left: 1rem;
     display: flex;
   }
 

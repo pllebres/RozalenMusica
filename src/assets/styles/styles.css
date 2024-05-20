@@ -72,7 +72,6 @@ a h3:hover  {
   display: flex;
   position: fixed;
   top: 0;
-  border: solid 1px #111;
   flex-direction: row;
 }
 
@@ -134,9 +133,9 @@ nav.menuHTML {
   display: block;
 }
 
-#trickMenu a:hover {
-  background-color: #575757;
-  border-radius: 5px;
+#trickMenu li:hover {
+  background-color: var(--contrast-purple);
+
 }
 
 /* Show the menu when the checkbox is checked */
@@ -186,7 +185,7 @@ nav.menuHTML {
   position: absolute;
   top: 20px; /* Ajusta la posición vertical según necesites */
   left: 20px; /* Ajusta la posición horizontal según necesites */
-  z-index: 2; /* Asegura que el breadcrumb esté por encima del hero */
+  z-index: 1; /* Asegura que el breadcrumb esté por encima del hero */
   padding: 1rem 16vw;
   margin-top: 80px;
 }
@@ -202,11 +201,10 @@ nav.menuHTML {
 }
 
 
-.hero-actualidad {
-  background-image: url('../images/raices.svg');
+.hero-interna {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center; 
   justify-content: space-between; /* Add space between the items */
   background-repeat: no-repeat;
   background-position: center;
@@ -214,8 +212,30 @@ nav.menuHTML {
   padding: 20px; /* Optional: Add some padding */
   box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
   background-size: 59%;
+  max-width: 1040px;
+    margin: 0 auto;
 }
 
+
+
+.hero-presentacion{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; /* Add space between the items */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 20px; /* Optional: Add some padding */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  background-size: 59%;
+  max-width: 1040px;
+    margin: 0 auto;
+    padding-top: 9rem;
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+}
 
 .hero-container {
   position: relative;
@@ -239,9 +259,9 @@ nav.menuHTML {
 }
 
 .hero-text {
-  text-align: center; /* Alinear el texto al centro horizontal */
-  flex: 1; /* Grow to take up available space */
-  padding: 20px; /* Optional: Add padding for better spacing */
+  text-align: left; 
+  flex: 1;
+  padding: 20px;
 }
 
 
@@ -249,10 +269,13 @@ nav.menuHTML {
   max-width: 100%; /* Ensure the image is responsive */
   height: auto; /* Maintain the aspect ratio */
 }
-svg#R {
+svg.R {
   width: 7rem;
 }
 
+.clip-svg {
+  clip-path: url(#myClip);
+}
 
 .clip-path {
   width: 300px;
@@ -260,7 +283,15 @@ svg#R {
   background-size: cover;
   background-image: url(../images/TodoLoQueAmaste.png);
   clip-path: ellipse(37% 41% at 50% 50%);
-  animation: wiggle 5s infinite;
+}
+
+.clip-path2{
+  width: 300px;
+  height: 260px;
+  background-size: cover;
+  background-image: url('../images/hero_actualidad_img_big.jpg');
+  clip-path: ellipse(37% 41% at 50% 50%);
+
 }
 
 .path {
@@ -268,6 +299,8 @@ svg#R {
   stroke-dashoffset: 3000;
   animation: dash 2s linear forwards;
 }
+
+
 
 @keyframes dash {
   to {
@@ -295,6 +328,23 @@ svg#R {
 #svg-music {
   width: 9rem;
 }
+
+.clip-svg {
+  width: 300px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  clip-path: url(#myclip);
+  animation: expandClipPath 3s forwards; /* Animación de expansión */
+}
+
+@keyframes expandClipPath {
+  0% {
+      clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+      clip-path: circle(50% at 50% 50%); /* Ajusta este valor según el tamaño de la imagen */
+  }
+}
+
 
 /* container */ 
 .row1 {
@@ -604,8 +654,11 @@ i.fa-brands:hover{
   display: flex;
   flex-direction: row;
   gap: 5vw;
-  padding: 2rem 16vw;
+  padding: 11rem 16vw 0;
 }
+
+
+
 .imagen-rotada {
   width: 100%;
   margin: 0px;
@@ -714,9 +767,7 @@ position: relative;
   margin-top: 5px;
 }
 
-label
-
-{
+label{
 
 cursor: pointer;
 
@@ -730,9 +781,7 @@ cursor: pointer;
 
 }
 
-#trickMenu
-
-{
+#trickMenu{
 
    display: none;
 
@@ -744,15 +793,21 @@ cursor: pointer;
 
 }
 
-#trickMenu li a
-
-{
-
-
+#trickMenu li a{
 
    padding: 10px 0;
 
    color: black;
+
+}
+
+
+#trickMenu li {
+  color: var(--white);
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
 
 }
 
@@ -764,7 +819,7 @@ cursor: pointer;
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
-  padding-left: 1rem;
+
 }
 
 
