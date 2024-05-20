@@ -1,0 +1,60 @@
+@keyframes movimiento-horizontal {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-25%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    75% {
+      transform: translateX(-75%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .cont_top_fechas {
+    overflow: hidden;
+    height: 4rem;
+    display: block;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 5rem;
+    
+  }
+  
+  .top_fechas {
+    width: 100%;
+    background: var(--contrast-purple);
+    color: #fff;
+    border-top: 5px solid var(--contrast-purple);
+    border-bottom: 5px solid var(--contrast-purple);
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Ensure content is centered vertically */
+  }
+  
+  .contenido_top_fechas {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation-name: movimiento-horizontal;
+    animation-duration: 100s; /* Adjust duration for desired speed */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .top_fechas p {
+    margin: 0 80px;
+    font-size: 1.1rem;
+  }
+  
+  .top_fechas p a {
+    margin-left: 10px;
+    color: #f8a300;
+  }
+  

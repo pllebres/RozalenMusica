@@ -17,8 +17,6 @@
   --link-color: var(--contrast-purple);
   --hover-link-color: var(--base-black);
   --footer-link: var(--white);
-
-
   --font-family: "roboto", Arial, Helvetica, sans-serif;
 }
 
@@ -37,6 +35,11 @@ body {
 
 .logo {
   width:190px;
+  margin-top:0.5rem;
+}
+
+.logo_footer{
+  margin-top: 1.5rem;
 }
 
 a {
@@ -58,7 +61,7 @@ a h3:hover  {
 /* header */ 
 
 .header {
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(255, 255, 255, .9);
   grid-template-columns: auto auto;
   justify-content: space-between;
@@ -66,10 +69,11 @@ a h3:hover  {
   width: 100%;
   padding-left: 0rem;
   padding-right: 4rem;
-  display: grid;
+  display: flex;
   position: fixed;
   top: 0;
   border: solid 1px #111;
+  flex-direction: row;
 }
 
 .nav {
@@ -96,6 +100,52 @@ a.nav_item:hover {
 
 
 
+/* nav toggle */ 
+
+nav.menuHTML {
+  display: none;
+}
+
+
+/* Style the dropdown menu */
+#trickMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--contrast-purple);
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 4;
+  margin-top: 0rem;
+}
+
+#trickMenu li {
+  list-style: none;
+  color: var(--white);
+}
+
+#trickMenu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+#trickMenu a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Show the menu when the checkbox is checked */
+#menu-toggle:checked + label + #trickMenu {
+  display: flex;
+}
+
+
+
 /* hero */ 
 
   .hero {
@@ -107,6 +157,8 @@ a.nav_item:hover {
     justify-content: center;
     align-items: center;
     margin-top: 76px;
+    max-width: 1040px;
+    margin: 8rem auto 0rem;
   }
   
   .hero-text, .video-mask {
@@ -126,8 +178,123 @@ a.nav_item:hover {
   mask-repeat: no-repeat;
 
 }
+.container {
+  position: relative;
+}
+
+.breadcrumb {
+  position: absolute;
+  top: 20px; /* Ajusta la posición vertical según necesites */
+  left: 20px; /* Ajusta la posición horizontal según necesites */
+  z-index: 2; /* Asegura que el breadcrumb esté por encima del hero */
+  padding: 1rem 16vw;
+  margin-top: 80px;
+}
+
+  .breadcrumb a:hover {
+  color: var(--base-black);
+  
+   }
+
+.img_responsive img {
+  width: 100%;
+  height: auto;
+}
 
 
+.hero-actualidad {
+  background-image: url('../images/raices.svg');
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Add space between the items */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 20px; /* Optional: Add some padding */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  background-size: 59%;
+}
+
+
+.hero-container {
+  position: relative;
+  display: flex; /* Activar el modelo de caja flexible */
+  justify-content: center; /* Alinear horizontalmente el contenido al centro */
+  align-items: center; /* Alinear verticalmente el contenido al centro */
+  overflow: hidden;
+  height: 61vh;
+  top: 6rem;
+}
+
+
+
+
+.hero-img {
+  -webkit-flex: 0 0 auto;
+  -moz-box-flex: 0;
+  flex: 1;
+
+  padding-top: 6rem;
+}
+
+.hero-text {
+  text-align: center; /* Alinear el texto al centro horizontal */
+  flex: 1; /* Grow to take up available space */
+  padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+
+.hero-img img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain the aspect ratio */
+}
+svg#R {
+  width: 7rem;
+}
+
+
+.clip-path {
+  width: 300px;
+  height: 260px;
+  background-size: cover;
+  background-image: url(../images/TodoLoQueAmaste.png);
+  clip-path: ellipse(37% 41% at 50% 50%);
+  animation: wiggle 5s infinite;
+}
+
+.path {
+  stroke-dasharray: 2740;
+  stroke-dashoffset: 3000;
+  animation: dash 2s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes wiggle {
+  0% {
+    clip-path: ellipse(37% 41% at 50% 50%);
+  }
+  25% {
+    clip-path: ellipse(42% 39% at 50% 50%);
+  }
+  50% {
+    clip-path: ellipse(32% 43% at 50% 50%);
+  }
+  75% {
+    clip-path: ellipse(38% 40% at 50% 50%);
+  }
+  100% {
+    clip-path: ellipse(37% 41% at 50% 50%);
+  }
+}
+
+#svg-music {
+  width: 9rem;
+}
 
 /* container */ 
 .row1 {
@@ -136,6 +303,8 @@ a.nav_item:hover {
   align-items: center;
 
 }
+
+
 
 
 /* tabla conciertos */ 
@@ -200,7 +369,7 @@ h2{
 }
 
 h3{
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 p {
@@ -310,10 +479,17 @@ p {
 
 
 .box {
-  height: 600px;
   display: flex;
   position: relative;
   overflow: hidden;
+  }
+
+  .img_responsive {
+    width: 100%;
+  }
+
+  .img_responsive img {
+    width: 100%;
   }
 
   .box-link {
@@ -346,6 +522,7 @@ font-size: .8rem;
 position: absolute;
 bottom: 0;
 left: 0;
+width:100%;
 }
 
 .row3 {
@@ -362,14 +539,19 @@ left: 0;
   margin-bottom: 1rem;
 }
 
+.author {
+  font-size: 1rem;
+}
+
 
 
 .footer {
   background-color: var(--base-black);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 17rem;
-
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .rrss {
@@ -381,16 +563,12 @@ left: 0;
     align-content: center;
     list-style-type: none; 
     color:var(--white);
-    width: 30%;
   }
   .enlaces {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
     gap: 1rem;
     padding: 2rem;
-    display: grid;
-    align-content: center;
-    list-style-type: none; 
+    display: flex;
+    list-style-type: none;
   }
 
   .enlaces ul{
@@ -435,15 +613,7 @@ i.fa-brands:hover{
 .imagen-rotada img {
   width: 32rem;
 }
-.breadcrumb {
-padding: 1rem 16vw;
-margin-top: 80px;
 
-  }
-.breadcrumb a:hover {
-color: var(--base-black);
-
- }
 
 .dark-theme{
 background-color: var(--base-black);
@@ -508,6 +678,96 @@ display: grid;
 
 
 @media screen and (max-width: 768px) {
+
+
+  /* nav*/ 
+
+
+  nav.menuHTML {
+    display: block;
+    width: 5rem;
+}
+
+nav.nav {
+  display: none;
+}
+
+.botonMenu{
+margin: 0 auto;
+display: block;
+width: 30px;
+height: 30px;
+padding: 10px;
+border-radius: 7px;
+background: var(--contrast-purple);
+color: white;
+cursor: pointer;
+position: relative;
+
+}
+
+.botonMenu span{
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: white;
+  margin-top: 5px;
+}
+
+label
+
+{
+
+cursor: pointer;
+
+}
+
+#menu-toggle
+
+{
+
+   display: none;
+
+}
+
+#trickMenu
+
+{
+
+   display: none;
+
+   text-align: center;
+
+   background: white;
+
+   padding: 10px 0;
+
+}
+
+#trickMenu li a
+
+{
+
+
+
+   padding: 10px 0;
+
+   color: black;
+
+}
+
+#menu-toggle:checked + #trickMenu{
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  padding-left: 1rem;
+}
+
+
 
 .hero {
   flex-direction: column;
@@ -604,7 +864,8 @@ grid-auto-rows: auto;
 }
 
 .footer {
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 .presentacion {
@@ -636,8 +897,33 @@ grid-auto-rows: auto;
   .noticia_imagen iframe {
     width: 100%;
     } 
+
+
+.rsss {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   
+} 
+
+.enlaces{
+display: flex;
+list-style-type: none;
+flex-direction: column;
+text-align: center;
+} 
+
+} 
+
+@media screen and (max-width: 420px) {
+
+  .hero-container {
+    height: 39vh;
+    top: 3rem;
 }
 
-
-
+.clip-path {
+  width: 171px;
+  height: 886px;
+}
+} 
