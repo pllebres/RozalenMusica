@@ -381,16 +381,7 @@ tr {
   position: relative; /* Asegura que el z-index funcione correctamente */
 }
 
-tr::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--base-black);
-    z-index: 1; /* Asegura que el borde inferior esté por encima del contenido de las celdas */
-}
+
 
 
 .fecha {
@@ -823,11 +814,12 @@ cursor: pointer;
 }
 
 
-
 .hero {
-  flex-direction: column;
-  padding: 2rem;
+  flex-direction: row;
   justify-content: center;
+  padding: 1rem 1.2rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hero-text {
@@ -924,7 +916,7 @@ grid-auto-rows: auto;
 }
 
 .presentacion {
-  padding: 2rem 2vw;
+  padding: 10rem 6vw 0rem;
   flex-direction: column;
 }
 .presentacion-impar {
@@ -977,8 +969,5 @@ text-align: center;
     top: 3rem;
 }
 
-.clip-path {
-  width: 171px;
-  height: 886px;
-}
+
 } 
