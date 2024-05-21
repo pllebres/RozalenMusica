@@ -969,5 +969,25 @@ text-align: center;
     top: 3rem;
 }
 
+.hero-interna {
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 59%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 9rem 2rem 0;
+  display: flex;
+}
+
+.guitar {
+  margin-top: -26rem;
+  position: relative;
+}
+
 
 } 
