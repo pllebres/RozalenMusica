@@ -29,10 +29,10 @@
   
   .top_fechas {
     width: 100%;
-    background: var(--contrast-purple);
-    color: #fff;
-    border-top: 5px solid var(--contrast-purple);
-    border-bottom: 5px solid var(--contrast-purple);
+    background: var(--base-black);
+    color: var(--light-cream);
+    border-top: 5px solid var(--base-black);
+    border-bottom: 5px solid var(--base-black);
     overflow: hidden;
     display: flex;
     align-items: center; /* Ensure content is centered vertically */
@@ -55,6 +55,6 @@
   
   .top_fechas p a {
     margin-left: 10px;
-    color: #f8a300;
+    color: var(--contrast-purple);
   }
   

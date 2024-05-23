@@ -31,10 +31,10 @@
 }
 
 .top_fechas {
-  background: var(--contrast-purple);
-  color: #fff;
-  border-top: 5px solid var(--contrast-purple);
-  border-bottom: 5px solid var(--contrast-purple);
+  background: var(--base-black);
+  color: var(--light-cream);
+  border-top: 5px solid var(--base-black);
+  border-bottom: 5px solid var(--base-black);
   align-items: center;
   width: 100%;
   display: flex;
@@ -57,7 +57,7 @@
 }
 
 .top_fechas p a {
-  color: #f8a300;
+  color: var(--contrast-purple);
   margin-left: 10px;
 }
 /*# sourceMappingURL=index.d661d0ff.css.map */

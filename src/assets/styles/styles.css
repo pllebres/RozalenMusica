@@ -15,6 +15,7 @@
   --light-contrast-color: var(--light-purple);
   --footer-hover-link: var(--contrast-purple);
   --link-color: var(--contrast-purple);
+  --p-color: var(--light-cream);
   --hover-link-color: var(--base-black);
   --footer-link: var(--white);
   --font-family: "roboto", Arial, Helvetica, sans-serif;
@@ -185,7 +186,7 @@ nav.menuHTML {
   position: absolute;
   top: 20px; /* Ajusta la posición vertical según necesites */
   left: 20px; /* Ajusta la posición horizontal según necesites */
-  z-index: 1; /* Asegura que el breadcrumb esté por encima del hero */
+  z-index: 3; /* Asegura que el breadcrumb esté por encima del hero */
   padding: 1rem 16vw;
   margin-top: 80px;
 }
@@ -307,6 +308,8 @@ svg.R {
     stroke-dashoffset: 0;
   }
 }
+
+
 @keyframes wiggle {
   0% {
     clip-path: ellipse(37% 41% at 50% 50%);
@@ -533,38 +536,32 @@ p {
     width: 100%;
   }
 
+
+
   .box-link {
+    display: block;  /* Establece un contexto de bloque */
+    overflow: hidden; /* Evita el desbordamiento visual durante la transformación */
+    position: relative; /* Posicionamiento relativo para el contexto */
+  }
+  
+  .transition-image {
     display: block;
-    text-decoration: none; /* Opcional: quitar subrayado del enlace */
-    color: inherit; /* Opcional: heredar el color del texto */
-    overflow: hidden;
-    height:350px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición de transform y opacity */
+    transform-origin: center; /* Mantiene la transformación centrada */
+  }
+  
+  .box-link:hover .transition-image {
+    transform: scale(1.1) translateX(-5%) translateY(-5%); /* Escala y ajusta la imagen */
+    opacity: 0.7; /* Cambia la opacidad */
+  }
+  
+  .box-link:hover {
+    filter: brightness(70%) contrast(100%) saturate(100%); /* Aplica filtros al hacer hover en el enlace */
+    transition: filter 0.3s ease; /* Transición suave para el filtro */
   }
 
-  .image-box {
-  object-fit: cover;
-  width: 100%;
-  transition: all .3s ease-in-out;
-  display: block;
-}
-
-
-.image-box:hover {
-  filter: brightness(70%) contrast(100%) saturate(100%) opacity(0.7);
-  transform: scale(1.1);
-  transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.box-content {
-background-color: rgba(255, 255, 255, .8);
-color: var(--base-black);
-padding: .5rem;
-font-size: .8rem;
-position: absolute;
-bottom: 0;
-left: 0;
-width:100%;
-}
+  
 
 .row3 {
   display: grid;
@@ -572,6 +569,10 @@ width:100%;
   grid-auto-rows: auto;
   gap: 1rem;
   padding: 2rem;
+}
+
+.row3 img {
+  width: 100%;
 }
 
 .box {
