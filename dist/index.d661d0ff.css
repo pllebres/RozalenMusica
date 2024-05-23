@@ -152,4 +152,15 @@
   opacity: .8;
   transform: translate(-2px, -1px);
 }
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
 /*# sourceMappingURL=index.d661d0ff.css.map */

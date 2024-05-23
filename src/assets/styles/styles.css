@@ -62,7 +62,7 @@ a h3:hover  {
 /* header */ 
 
 .header {
-  z-index: 2;
+  z-index: 4;
   background-color: rgba(255, 255, 255, .9);
   grid-template-columns: auto auto;
   justify-content: space-between;
@@ -280,16 +280,14 @@ svg.R {
 
 .clip-path {
   width: 300px;
-  height: 260px;
+  height: 238px;
   background-size: cover;
   background-image: url(../images/TodoLoQueAmaste.png);
   clip-path: ellipse(37% 41% at 50% 50%);
   transition: clip-path 0.5s ease-in-out;
+  animation: wiggle 5s infinite;
 }
 
-.clip-path:hover {
-animation: wiggle 5s infinite;
-}
 
 
 
@@ -368,25 +366,12 @@ animation: wiggle 5s infinite;
   }
 }
 
-#svg-music {
-  width: 9rem;
-}
 
 .clip-svg {
-  width: 300px; /* Ajusta el tamaño según tus necesidades */
-  height: auto;
-  clip-path: url(#myclip);
-  animation: expandClipPath 3s forwards; /* Animación de expansión */
+clip-path: path('M370.5,329Q343,418,248,404.5Q153,391,88,315.5Q23,240,90,167.5Q157,95,236,102.5Q315,110,356.5,175Q398,240,370.5,329Z');
+
 }
 
-@keyframes expandClipPath {
-  0% {
-      clip-path: circle(0% at 50% 50%);
-  }
-  100% {
-      clip-path: circle(50% at 50% 50%); /* Ajusta este valor según el tamaño de la imagen */
-  }
-}
 
 
 /* container */ 
