@@ -241,26 +241,11 @@ svg.R {
   background-size: cover;
   width: 300px;
   height: 260px;
+  transition: clip-path .5s ease-in-out;
 }
 
-.clip-path2 {
-  clip-path: ellipse(37% 41%);
-  background-image: url("hero_actualidad_img_big.511261a3.jpeg");
-  background-size: cover;
-  width: 300px;
-  height: 260px;
-}
-
-.path {
-  stroke-dasharray: 2740;
-  stroke-dashoffset: 3000px;
-  animation: 2s linear forwards dash;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
+.clip-path:hover {
+  animation: 5s infinite wiggle;
 }
 
 @keyframes wiggle {
@@ -282,6 +267,26 @@ svg.R {
 
   100% {
     clip-path: ellipse(37% 41%);
+  }
+}
+
+.clip-path2 {
+  clip-path: ellipse(37% 41%);
+  background-image: url("hero_actualidad_img_big.511261a3.jpeg");
+  background-size: cover;
+  width: 300px;
+  height: 260px;
+}
+
+.path {
+  stroke-dasharray: 2740;
+  stroke-dashoffset: 3000px;
+  animation: 2s linear forwards dash;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
@@ -366,81 +371,6 @@ p {
   font-size: 1.5em;
 }
 
-.fa-solid, .fas {
-  font-weight: 600;
-}
-
-.fa-classic, .fa-regular, .fa-solid, .far, .fas {
-  font-family: "Font Awesome 6 Free";
-}
-
-.primary-button {
-  background: var(--white);
-  border: 2px solid var(--base-black);
-  box-shadow: 5px 5px var(--base-black), inset 5px 5px var(--white), inset 1px 1px var(--base-black);
-  border-radius: 20px;
-  padding: 1.1rem 3rem;
-  font-family: -system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: all .3s;
-  position: relative;
-}
-
-.primary-button a {
-  color: var(--base-black);
-  text-decoration: none;
-}
-
-.primary-button:after {
-  width: 10px;
-  height: 5px;
-  top: 5px;
-  left: 100%;
-}
-
-.primary-button:hover {
-  box-shadow: 7px 7px var(--base-black), inset 7px 7px var(--white), inset 1px 1px var(--base-black);
-  transform: translate(-4px, -2px);
-}
-
-.secondary-button {
-  color: var(--contrast-purple);
-  text-align: left;
-  background-color: #0000;
-  border: none;
-  width: fit-content;
-  margin: 0 2px;
-  padding: 13px 6px;
-  font-family: Poppins, sans-serif;
-  font-size: 1.5em;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.secondary-button:hover {
-  color: var(--base-black);
-  transform: translate(-4px, -2px);
-}
-
-.btn {
-  font-family: var(--font-family);
-  color: var(--contrast-purple);
-  border: none;
-  height: 3em;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.btn:hover {
-  font-family: var(--font-family);
-  color: var(--base-black);
-  border: none;
-  height: 3em;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 .row2 {
   background-color: var(--light-cream);
   grid-template-columns: repeat(4, 1fr);
@@ -454,6 +384,17 @@ p {
   display: flex;
   position: relative;
   overflow: hidden;
+}
+
+.box-content {
+  color: var(--base-black);
+  background-color: #fffc;
+  width: 100%;
+  padding: .5rem;
+  font-size: .8rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .img_responsive, .img_responsive img {
@@ -493,12 +434,6 @@ p {
 
 .row3 img {
   width: 100%;
-}
-
-.box {
-  background-color: var(--white);
-  margin-bottom: 1rem;
-  margin-right: 1rem;
 }
 
 .author {

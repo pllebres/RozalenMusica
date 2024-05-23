@@ -60,4 +60,96 @@
   color: var(--contrast-purple);
   margin-left: 10px;
 }
+
+.fa-solid, .fas {
+  font-weight: 600;
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+  font-family: "Font Awesome 6 Free";
+}
+
+.primary-button {
+  background: var(--white);
+  border: 2px solid var(--base-black);
+  box-shadow: 5px 5px var(--base-black), inset 5px 5px var(--white), inset 1px 1px var(--base-black);
+  border-radius: 20px;
+  padding: 1.1rem 3rem;
+  font-family: -system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all .3s;
+  position: relative;
+}
+
+.primary-button a {
+  color: var(--base-black);
+  text-decoration: none;
+}
+
+.primary-button:after {
+  width: 10px;
+  height: 5px;
+  top: 5px;
+  left: 100%;
+}
+
+.primary-button:hover {
+  box-shadow: 7px 7px var(--base-black), inset 7px 7px var(--white), inset 1px 1px var(--base-black);
+  transform: translate(-4px, -2px);
+}
+
+.secondary-button {
+  color: var(--contrast-purple);
+  text-align: left;
+  background-color: #0000;
+  border: none;
+  width: fit-content;
+  margin: 0 2px;
+  padding: 13px 6px;
+  font-family: Poppins, sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.secondary-button:hover {
+  color: var(--base-black);
+  transform: translate(-4px, -2px);
+}
+
+.btn {
+  font-family: var(--font-family);
+  color: var(--contrast-purple);
+  border: none;
+  border-radius: 20px;
+  height: 3em;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  font-family: var(--font-family);
+  color: var(--base-black);
+  border: none;
+  height: 3em;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-terciario {
+  background-color: var(--light-cream);
+  background-color: var(--light-cream);
+  border-radius: 10px;
+  padding: .1rem .2rem;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: all .3s;
+  position: relative;
+}
+
+.btn-terciario:hover {
+  opacity: .8;
+  transform: translate(-2px, -1px);
+}
 /*# sourceMappingURL=index.d661d0ff.css.map */
