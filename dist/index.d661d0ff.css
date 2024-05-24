@@ -1,76 +1,3 @@
-.header {
-  z-index: 4;
-  background-color: #ffffffe6;
-  flex-direction: row;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 4rem;
-  display: flex;
-  position: fixed;
-  top: 0;
-}
-
-.nav {
-  padding-right: 20px;
-}
-
-.nav_item {
-  color: var(--base-black);
-  align-items: center;
-  height: 100%;
-  margin-right: 30px;
-  font-size: 1.1rem;
-  font-weight: 400;
-  text-decoration: none;
-  transition: all .3s cubic-bezier(.075, .82, .165, 1);
-  position: relative;
-}
-
-a.nav_item:hover {
-  color: var(--contrast-purple);
-}
-
-nav.menuHTML {
-  display: none;
-}
-
-#trickMenu {
-  background-color: var(--contrast-purple);
-  z-index: 4;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 0;
-  padding: 10px 0;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-#trickMenu li {
-  color: var(--white);
-  list-style: none;
-}
-
-#trickMenu a {
-  color: #fff;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-}
-
-#trickMenu li:hover {
-  background-color: var(--contrast-purple);
-}
-
-#menu-toggle:checked + label + #trickMenu {
-  display: flex;
-}
-
 @keyframes movimiento-horizontal {
   0% {
     transform: translateX(0%);
@@ -239,9 +166,5 @@ a.primary-button:hover {
   padding: 0;
   position: absolute;
   overflow: hidden;
-}
-
-i.fab:hover {
-  color: var(--contrast-purple);
 }
 /*# sourceMappingURL=index.d661d0ff.css.map */
