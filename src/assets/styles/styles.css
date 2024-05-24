@@ -48,13 +48,13 @@ a {
 }
 
 a h3 {
-  color: var(--contrast-purple);
+  color: var(--base-black);
   text-decoration: none;
 
 }
 
 a h3:hover  {
-  color: var(--base-black);
+  color: var(--contrast-purple);
 
 }
 
