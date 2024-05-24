@@ -1,3 +1,103 @@
+
+
+/* header */ 
+
+.header {
+  z-index: 4;
+  background-color: rgba(255, 255, 255, .9);
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 0rem;
+  padding-right: 4rem;
+  display: flex;
+  position: fixed;
+  top: 0;
+  flex-direction: row;
+}
+
+.nav {
+  padding-right: 20px;
+}
+
+
+.nav_item {
+  color: var(--base-black);
+  align-items: center;
+  height: 100%;
+  margin-right: 30px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  transition: all .3s cubic-bezier(.075,.82,.165,1);
+  position: relative;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a.nav_item:hover {
+  color: var(--contrast-purple);
+}
+
+
+
+/* nav toggle */ 
+
+nav.menuHTML {
+  display: none;
+}
+
+
+/* Style the dropdown menu */
+#trickMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--contrast-purple);
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 4;
+  margin-top: 0rem;
+}
+
+#trickMenu li {
+  list-style: none;
+  color: var(--white);
+}
+
+#trickMenu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+#trickMenu li:hover {
+  background-color: var(--contrast-purple);
+
+}
+
+/* Show the menu when the checkbox is checked */
+#menu-toggle:checked + label + #trickMenu {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes movimiento-horizontal {
     0% {
       transform: translateX(0%);
@@ -18,7 +118,7 @@
   
   .cont_top_fechas {
     overflow: hidden;
-    height: 4rem;
+    height: 2rem;
     display: block;
     width: 100%;
     position: absolute;
@@ -88,9 +188,14 @@
   transition: all .3s;
   }
   
-  .primary-button  a{
+  a.primary-button, .primary-button  a{
     color: var(--base-black);
     text-decoration: none;
+  } 
+
+  a.primary-button:hover{
+    color: var(--contrast-purple);
+  
   } 
 
   .primary-button:after {
@@ -186,3 +291,8 @@
       clip: rect(0, 0, 0, 0);
       border: 0;
     }
+
+    i.fab:hover {
+      color: var(--contrast-purple);
+  }
+ 
