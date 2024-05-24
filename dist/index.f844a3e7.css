@@ -563,6 +563,7 @@ i.fa-brands:hover {
   #trickMenu {
     text-align: center;
     background: #fff;
+    margin-top: -.8rem;
     padding: 10px 0;
     display: none;
   }
