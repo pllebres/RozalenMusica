@@ -143,17 +143,17 @@ a.primary-button:hover {
 
 .btn-terciario {
   background-color: var(--light-cream);
-  background-color: var(--light-cream);
+  color: var(--contrast-purple);
   border-radius: 10px;
-  padding: .1rem .2rem;
-  font-size: .9rem;
+  padding: .1rem .6rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  transition: all .3s;
-  position: relative;
 }
 
 .btn-terciario:hover {
+  color: var(--base-black) transition: all .3s;
   opacity: .8;
+  position: relative;
   transform: translate(-2px, -1px);
 }
 

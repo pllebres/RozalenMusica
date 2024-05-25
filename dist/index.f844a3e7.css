@@ -724,6 +724,10 @@ i.fa-brands:hover {
 }
 
 @media screen and (width <= 420px) {
+  .breadcrumb {
+    padding: 2rem 0;
+  }
+
   .clip-svg {
     width: 100%;
   }
