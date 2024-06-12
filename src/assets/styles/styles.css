@@ -143,6 +143,7 @@ nav.menuHTML {
 /* Show the menu when the checkbox is checked */
 #menu-toggle:checked + label + #trickMenu {
   display: flex;
+  flex-direction: column;
 }
 
 
