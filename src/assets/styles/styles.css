@@ -217,6 +217,7 @@ nav.menuHTML {
   background-size: 59%;
   max-width: 1040px;
     margin: 0 auto;
+    padding-top: 110px;
 }
 
 
@@ -431,7 +432,7 @@ h2{
 
 h3{
   font-size: 1.7em;
-  
+
 }
 
 p {
@@ -883,7 +884,31 @@ display: flex;
 list-style-type: none;
 flex-direction: column;
 text-align: center;
-} 
+}
+
+
+.hero-interna {
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 59%;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 110px 20px 20px;
+  display: flex;
+  flex-direction: column !important; 
+ 
+}
+
+.image-container {
+  width: 270px;
+  height: 384px;
+  position: absolute;
+  top: 15rem;
+}
 
 } 
 
@@ -903,20 +928,6 @@ text-align: center;
     top: 3rem;
 }
 
-.hero-interna {
-  box-sizing: border-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 59%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 9rem 2rem 0;
-  display: flex;
-}
 
 .guitar {
   margin-top: -26rem;
