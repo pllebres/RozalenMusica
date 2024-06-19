@@ -324,7 +324,7 @@ svg.R {
   width: 300px;
   height: 260px;
   background-size: cover;
-  background-image: url('../images/hero_actualidad_img_big.jpg');
+  background-image: url('../images/hero_img_actualidad_big.webp');
   clip-path: ellipse(37% 41% at 50% 50%);
 
 }
