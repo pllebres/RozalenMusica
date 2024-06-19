@@ -10,9 +10,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<!-- Precarga de la Imagen Crítica -->
+<link rel="preload" href="/music-4052897-guitar-02.65a70029.webp" as="image">
 <script src="https://kit.fontawesome.com/16b380b602.js" crossorigin="anonymous"></script>
 
-<!-- Inline Critical CSS -->
+<!--  CSS crítico imagen guitarra-->
 <style>.image-container {
   width: 317px;
   height: 465px;
@@ -35,8 +37,7 @@
 }
 </style>
 
-<!-- Precarga de la Imagen Crítica -->
-<link rel="preload" href="/music-4052897-guitar-02.65a70029.webp" as="image">
+
 
 
  </head>
@@ -62,7 +63,7 @@
        <a href="/index.html">
            <picture>
                <source srcset="/logo_Rozalen_n.b69f5bc9.svg" type="image/svg+xml">
-               <img src="/logo_Rozalen_n.36e5ff60.png" alt="Logo">
+               <img src="/logo_Rozalen_n.36e5ff60.png" alt="Logo" width="150px" height="80px">
            </picture>
        </a>
    </div>
@@ -112,9 +113,9 @@
 
           <div class="clip-path2"></div>
 
-         <!-- Imagen con Lazy Loading -->
+ 
 <div class="image-container">
-  <img srcset="/music-4052897-guitar-02.65a70029.webp 1x, /music-4052897-guitar-02.65a70029.webp 2x" src="/music-4052897-guitar-02.65a70029.webp" height="500" width="400" alt="guitarra" loading="lazy">
+  <img srcset="/music-4052897-guitar-02.65a70029.webp 1x, /music-4052897-guitar-02.65a70029.webp 2x" src="/music-4052897-guitar-02.65a70029.webp" height="500" width="400" alt="guitarra">
 </div>
   
           

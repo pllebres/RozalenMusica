@@ -479,7 +479,7 @@ i.fa-brands:hover {
 }
 
 .imagen-rotada img {
-  width: 32rem;
+  width: 100%;
 }
 
 .dark-theme {
@@ -681,10 +681,6 @@ i.fa-brands:hover {
     display: flex;
   }
 
-  .imagen-rotada img {
-    width: 100%;
-  }
-
   .noticia {
     flex-direction: column;
     width: 100%;
@@ -727,13 +723,6 @@ i.fa-brands:hover {
     padding: 110px 20px 20px;
     display: flex;
     flex-direction: column !important;
-  }
-
-  .image-container {
-    width: 270px;
-    height: 384px;
-    position: absolute;
-    top: 15rem;
   }
 }
 

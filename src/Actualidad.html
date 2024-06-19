@@ -10,9 +10,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<!-- Precarga de la Imagen Crítica -->
+<link rel="preload" href="./assets/images/music-4052897-guitar-02.webp" as="image">
 <script src="https://kit.fontawesome.com/16b380b602.js" crossorigin="anonymous"></script>
 
-<!-- Inline Critical CSS -->
+<!--  CSS crítico imagen guitarra-->
 <style>
   /* Estilos críticos necesarios para la visualización inicial */
   .image-container {
@@ -38,8 +40,7 @@
 
 </style>
 
-<!-- Precarga de la Imagen Crítica -->
-<link rel="preload" href="./assets/images/music-4052897-guitar-02.webp" as="image">
+
 
 
  </head>
@@ -59,15 +60,14 @@
 
           <div class="clip-path2"></div>
 
-         <!-- Imagen con Lazy Loading -->
+ 
 <div class="image-container">
   <img 
     srcset="./assets/images/music-4052897-guitar-02.webp 1x, ./assets/images/music-4052897-guitar-02.webp 2x" 
     src="./assets/images/music-4052897-guitar-02.webp"
     height="500" 
     width="400" 
-    alt="guitarra" 
-    loading="lazy">
+    alt="guitarra" >
 </div>
   
           
