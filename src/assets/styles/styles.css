@@ -925,9 +925,9 @@ text-align: center;
 }
 
 
-.guitar {
-  margin-top: -26rem;
-  position: relative;
+.container-guitar{
+    margin-top: -295px;
+    z-index: 1;
 }
 
 

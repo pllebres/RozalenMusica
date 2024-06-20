@@ -744,9 +744,9 @@ i.fa-brands:hover {
     top: 3rem;
   }
 
-  .guitar {
-    margin-top: -26rem;
-    position: relative;
+  .container-guitar {
+    z-index: 1;
+    margin-top: -295px;
   }
 }
 /*# sourceMappingURL=styles.f844a3e7.css.map */
