@@ -634,7 +634,9 @@ display: grid;
     text-align: center;
   }
 
-
+  .texto {
+    width: 70%;
+}
 @media screen and (max-width: 1024px) {
 
   .row2 {

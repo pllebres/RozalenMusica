@@ -518,6 +518,10 @@ i.fa-brands:hover {
   text-align: center;
 }
 
+.texto {
+  width: 70%;
+}
+
 @media screen and (width <= 1024px) {
   .row2, .row3 {
     grid-template-columns: repeat(2, 1fr);
